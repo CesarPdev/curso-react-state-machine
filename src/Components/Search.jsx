@@ -21,7 +21,7 @@ export const Search = ({ send }) => {
         <option value="" disabled defaultValue>Escoge un país</option>
         {options.map((option) => <option value={option} key={option}>{option}</option>)}
       </select>
-      <button onClick={goToPassengers} disabled={flight === ''} className='Search-continue button'>Continuar</button>
+      <button onClick={goToPassengers} disabled={flight === ''} className='Search-continue rounded-lg bg-indigo-700 text-white p-2'>Continuar</button>
     </div>
   );
 }; 

@@ -31,13 +31,13 @@ export const Passengers = ({ state, send }) => {
       />
       <div className='Passengers-buttons'>
         <button 
-          className='Passengers-add button-secondary'
+          className='Passengers-add button-secondary bg-white rounded-lg p-2'
           type="submit"
         >
           Agregar Pasajero
         </button>
         <button
-          className='Passenger-pay button'
+          className='Passenger-pay button rounded-lg bg-indigo-700 text-white p-2'
           type="button"
           onClick={goToTicket}
         >

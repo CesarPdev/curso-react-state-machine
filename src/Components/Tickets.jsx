@@ -15,7 +15,12 @@ export const Tickets = ({ send, context }) => {
           <span>✈</span>
         </div>
       </div>
-      <button onClick={finish} className='Tickets-finalizar rounded-lg bg-indigo-700 text-white p-2'>Finalizar</button>
+      <button
+        onClick={finish}
+        className='Tickets-finalizar rounded-lg bg-indigo-700 text-white p-2'
+      >
+        Finalizar
+      </button>
     </div>
   );
 }; 

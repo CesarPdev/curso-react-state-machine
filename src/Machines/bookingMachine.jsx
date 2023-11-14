@@ -18,16 +18,16 @@ const bookingMachine = createMachine({
         },
         search: {
             on: {
-            NEXT: {
-                target: "passengers",
-                actions: assign({
-                    selectedCountry: (context, e) => e.selectedCountry
-                })
-            },
-            CANCEL: {
-                target: "initial",
-                actions: assign({selectedCountry: (context) => ''})
-            },
+                NEXT: {
+                    target: "passengers",
+                    actions: assign({
+                        selectedCountry: (context, e) => e.selectedCountry
+                    })
+                },
+                CANCEL: {
+                    target: "initial",
+                    actions: 'cleanContext'
+                },
             },
         },
         passengers: {
@@ -35,10 +35,7 @@ const bookingMachine = createMachine({
             FINAL: "tickets",
             CANCEL: {
                 target: "initial",
-                actions: assign({
-                    selectedCountry: (context) => '',
-                    passengers: (context) => []
-                })
+                actions: 'cleanContext'
             },
             ADD: {
                 target: 'passengers',
@@ -52,17 +49,19 @@ const bookingMachine = createMachine({
             on: {
             FINISH: {
                 target: "initial",
-                actions: assign({
-                    selectedCountry: (context) => '',
-                    passengers: (context) => [],
-                })
+                actions: 'cleanContext'
             },
             }
         },
     },
 },
 {
-    actions: {},
+    actions: {
+        cleanContext: assign({
+            selectedCountry: '',
+            passengers: []
+        })
+    },
 },
 );
 

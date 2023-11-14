@@ -9,16 +9,16 @@ export const Nav = ({ state, send }) => {
   return (
     <nav className='Nav'>
       {state.matches('initial') &&
-        <h1 className='Nav-logo'>Book a fly ✈</h1>
+        <h1 className='Nav-logo'>Book a Fly ✈</h1>
       }
       {state.matches('search') &&
-        <h1 className='Nav-logo'>Book a fly ✈✈</h1>
+        <h1 className='Nav-logo'>Book a Fly ✈✈</h1>
       }
       {state.matches('passengers') &&
-        <h1 className='Nav-logo'>Book a fly ✈✈✈</h1>
+        <h1 className='Nav-logo'>Book a Fly ✈✈✈</h1>
       }
       {state.matches('tickets') &&
-        <h1 className='Nav-logo'>Book a fly ✈✈✈✈</h1>
+        <h1 className='Nav-logo'>Book a Fly ✈✈✈✈</h1>
       }
       {!state.matches('initial') &&
         <button

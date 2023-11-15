@@ -20,7 +20,7 @@ export const Nav = ({ state, send }) => {
       {state.matches('tickets') &&
         <h1 className='Nav-logo'>Book a Fly ✈✈✈✈</h1>
       }
-      {!state.matches('initial') &&
+      {!state.matches('initial') && !state.matches('tickets') &&
         <button
           onClick={goToWelcome}
           className='Nav-cancel button-secondary bg-white rounded-lg p-2'
